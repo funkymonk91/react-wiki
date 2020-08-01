@@ -1,0 +1,132 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+/* Additional vertical padding used by kbd tag. */
+.py-05 {
+    padding-top: 0.125rem;
+    padding-bottom: 0.125rem;
+}
+
+.editor-preview-active,
+.editor-preview-side {
+    @apply text-gray-900 leading-normal break-words;
+}
+
+.editor-preview-active > * + *,
+.editor-preview-side > * + * {
+    @apply mt-0 mb-4;
+}
+
+.editor-preview-active li + li,
+.editor-preview-side li + li {
+    @apply mt-1;
+}
+
+.editor-preview-active li > p + p,
+.editor-preview-side li > p + p {
+    @apply mt-6;
+}
+
+.editor-preview-active strong,
+.editor-preview-side strong {
+    @apply font-semibold;
+}
+
+.editor-preview-active a,
+.editor-preview-side a {
+    @apply text-blue-600 font-semibold;
+}
+
+.editor-preview-active strong a,
+.editor-preview-side strong a {
+    @apply font-bold;
+}
+
+.editor-preview-active h1,
+.editor-preview-side h1 {
+    @apply leading-tight border-b text-4xl font-semibold mb-4 mt-6 pb-2;
+}
+
+.editor-preview-active h2,
+.editor-preview-side h2 {
+    @apply leading-tight border-b text-2xl font-semibold mb-4 mt-6 pb-2;
+}
+
+.editor-preview-active h3,
+.editor-preview-side h3 {
+    @apply leading-snug text-lg font-semibold mb-4 mt-6;
+}
+
+.editor-preview-active h4,
+.editor-preview-side h4 {
+    @apply leading-none text-base font-semibold mb-4 mt-6;
+}
+
+.editor-preview-active h5,
+.editor-preview-side h5 {
+    @apply leading-tight text-sm font-semibold mb-4 mt-6;
+}
+
+.editor-preview-active h6,
+.editor-preview-side h6 {
+    @apply leading-tight text-sm font-semibold text-gray-600 mb-4 mt-6;
+}
+
+.editor-preview-active blockquote,
+.editor-preview-side blockquote {
+    @apply text-base border-l-4 border-gray-300 pl-4 pr-4 text-gray-600;
+}
+
+.editor-preview-active code,
+.editor-preview-side code {
+    @apply font-mono text-sm inline bg-gray-200 rounded px-1 py-05;
+}
+
+.editor-preview-active pre,
+.editor-preview-side pre {
+    @apply bg-gray-100 rounded p-4;
+}
+
+.editor-preview-active pre code,
+.editor-preview-side pre code {
+    @apply block bg-transparent p-0 overflow-visible rounded-none;
+}
+
+.editor-preview-active ul,
+.editor-preview-side ul {
+    @apply text-base pl-8 list-disc;
+}
+
+.editor-preview-active ol,
+.editor-preview-side ol {
+    @apply text-base pl-8 list-decimal;
+}
+
+.editor-preview-active kbd,
+.editor-preview-side kbd {
+    @apply text-xs inline-block rounded border px-1 py-05 align-middle font-normal font-mono shadow;
+}
+
+.editor-preview-active table,
+.editor-preview-side table {
+    @apply text-base border-gray-600;
+}
+
+.editor-preview-active th,
+.editor-preview-side th {
+    @apply border py-1 px-3;
+}
+
+.editor-preview-active td,
+.editor-preview-side td {
+    @apply border py-1 px-3;
+}
+
+/* Override pygments style background color. */
+.editor-preview-active .highlight pre,
+.editor-preview-side .highlight pre {
+    @apply bg-gray-100 !important;
+}
+
+@import 'tailwindcss/utilities';
